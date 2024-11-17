@@ -1,0 +1,325 @@
+2024-11-17 01:56:25,465 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2024-11-17 02:39:04,744 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2024-11-17 02:39:04,911 - httpx - INFO - HTTP Request: GET http://127.0.0.1:7860/gradio_api/startup-events "HTTP/1.1 200 OK"
+2024-11-17 02:39:04,969 - httpx - INFO - HTTP Request: HEAD http://127.0.0.1:7860/ "HTTP/1.1 200 OK"
+2024-11-17 02:39:05,366 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2024-11-17 02:39:06,493 - httpx - INFO - HTTP Request: GET https://api.gradio.app/v3/tunnel-request "HTTP/1.1 200 OK"
+2024-11-17 02:39:07,016 - httpx - INFO - HTTP Request: GET https://cdn-media.huggingface.co/frpc-gradio-0.3/frpc_windows_amd64.exe "HTTP/1.1 200 OK"
+2024-11-17 02:40:51,975 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2024-11-17 02:40:54,502 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2024-11-17 02:41:26,640 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2024-11-17 02:42:27,485 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2024-11-17 02:42:34,624 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2024-11-17 02:42:35,692 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2024-11-17 02:42:47,966 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2024-11-17 02:43:25,457 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2024-11-17 02:45:33,538 - __main__ - INFO - Starting prediction process...
+2024-11-17 02:45:33,541 - src.exception - ERROR - Error loading scaler in DataPreprocessor.
+Exception type: <class 'FileNotFoundError'>
+Traceback:
+Traceback (most recent call last):
+  File "D:\Projects\AI Projects\Heart Disease Prediction - GenAI\src\predict.py", line 14, in __init__
+    self.scaler = joblib.load(f"{MODELS_DIR}/scaler_object.joblib")
+  File "C:\Users\sukan\miniconda3\envs\py310\lib\site-packages\joblib\numpy_pickle.py", line 650, in load
+    with open(filename, 'rb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Projects\\AI Projects\\Heart Disease Prediction - GenAI\\final_models/scaler_object.joblib'
+
+2024-11-17 02:45:33,545 - src.exception - ERROR - Error in prediction function.
+Exception type: <class 'src.exception.ModelLoadingError'>
+Traceback:
+Traceback (most recent call last):
+  File "D:\Projects\AI Projects\Heart Disease Prediction - GenAI\src\predict.py", line 14, in __init__
+    self.scaler = joblib.load(f"{MODELS_DIR}/scaler_object.joblib")
+  File "C:\Users\sukan\miniconda3\envs\py310\lib\site-packages\joblib\numpy_pickle.py", line 650, in load
+    with open(filename, 'rb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Projects\\AI Projects\\Heart Disease Prediction - GenAI\\final_models/scaler_object.joblib'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Projects\AI Projects\Heart Disease Prediction - GenAI\src\predict.py", line 52, in prediction
+    preprocessor = DataPreprocessor()
+  File "D:\Projects\AI Projects\Heart Disease Prediction - GenAI\src\predict.py", line 18, in __init__
+    raise ModelLoadingError("Could not load the scaler for data preprocessing.") from e
+src.exception.ModelLoadingError: Could not load the scaler for data preprocessing.
+
+2024-11-17 02:45:33,548 - __main__ - ERROR - Error in prediction: Prediction function encountered an error. Check inputs and model paths.
+2024-11-17 02:47:18,147 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2024-11-17 02:47:22,550 - __main__ - INFO - Starting prediction process...
+2024-11-17 02:47:22,553 - src.exception - ERROR - Error loading scaler in DataPreprocessor.
+Exception type: <class 'FileNotFoundError'>
+Traceback:
+Traceback (most recent call last):
+  File "D:\Projects\AI Projects\Heart Disease Prediction - GenAI\src\predict.py", line 14, in __init__
+    self.scaler = joblib.load(f"{MODELS_DIR}/scaler_object.joblib")
+  File "C:\Users\sukan\miniconda3\envs\py310\lib\site-packages\joblib\numpy_pickle.py", line 650, in load
+    with open(filename, 'rb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Projects\\AI Projects\\Heart Disease Prediction - GenAI\\final_models/scaler_object.joblib'
+
+2024-11-17 02:47:22,553 - src.exception - ERROR - Error in prediction function.
+Exception type: <class 'src.exception.ModelLoadingError'>
+Traceback:
+Traceback (most recent call last):
+  File "D:\Projects\AI Projects\Heart Disease Prediction - GenAI\src\predict.py", line 14, in __init__
+    self.scaler = joblib.load(f"{MODELS_DIR}/scaler_object.joblib")
+  File "C:\Users\sukan\miniconda3\envs\py310\lib\site-packages\joblib\numpy_pickle.py", line 650, in load
+    with open(filename, 'rb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Projects\\AI Projects\\Heart Disease Prediction - GenAI\\final_models/scaler_object.joblib'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Projects\AI Projects\Heart Disease Prediction - GenAI\src\predict.py", line 52, in prediction
+    preprocessor = DataPreprocessor()
+  File "D:\Projects\AI Projects\Heart Disease Prediction - GenAI\src\predict.py", line 18, in __init__
+    raise ModelLoadingError("Could not load the scaler for data preprocessing.") from e
+src.exception.ModelLoadingError: Could not load the scaler for data preprocessing.
+
+2024-11-17 02:47:22,577 - __main__ - ERROR - Error in prediction: Prediction function encountered an error. Check inputs and model paths.
+2024-11-17 02:48:41,505 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2024-11-17 02:48:44,049 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2024-11-17 02:48:51,090 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2024-11-17 02:48:52,244 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2024-11-17 02:48:54,443 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2024-11-17 02:48:56,742 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2024-11-17 02:49:04,002 - __main__ - INFO - Starting prediction process...
+2024-11-17 02:49:06,243 - src.predict - INFO - DataPreprocessor initialized with scaler.
+2024-11-17 02:49:06,273 - src.exception - ERROR - Failed to load ML model in ML_Model_Predictor.
+Exception type: <class 'KeyError'>
+Traceback:
+Traceback (most recent call last):
+  File "D:\Projects\AI Projects\Heart Disease Prediction - GenAI\src\predict.py", line 33, in __init__
+    self.model = joblib.load(f"{MODELS_DIR}/dl_best_model.h5")
+  File "C:\Users\sukan\miniconda3\envs\py310\lib\site-packages\joblib\numpy_pickle.py", line 658, in load
+    obj = _unpickle(fobj, filename, mmap_mode)
+  File "C:\Users\sukan\miniconda3\envs\py310\lib\site-packages\joblib\numpy_pickle.py", line 577, in _unpickle
+    obj = unpickler.load()
+  File "C:\Users\sukan\miniconda3\envs\py310\lib\pickle.py", line 1213, in load
+    dispatch[key[0]](self)
+KeyError: 72
+
+2024-11-17 02:49:06,278 - src.exception - ERROR - Error in prediction function.
+Exception type: <class 'src.exception.ModelLoadingError'>
+Traceback:
+Traceback (most recent call last):
+  File "D:\Projects\AI Projects\Heart Disease Prediction - GenAI\src\predict.py", line 33, in __init__
+    self.model = joblib.load(f"{MODELS_DIR}/dl_best_model.h5")
+  File "C:\Users\sukan\miniconda3\envs\py310\lib\site-packages\joblib\numpy_pickle.py", line 658, in load
+    obj = _unpickle(fobj, filename, mmap_mode)
+  File "C:\Users\sukan\miniconda3\envs\py310\lib\site-packages\joblib\numpy_pickle.py", line 577, in _unpickle
+    obj = unpickler.load()
+  File "C:\Users\sukan\miniconda3\envs\py310\lib\pickle.py", line 1213, in load
+    dispatch[key[0]](self)
+KeyError: 72
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Projects\AI Projects\Heart Disease Prediction - GenAI\src\predict.py", line 53, in prediction
+    ml_predictor = ML_Model_Predictor()
+  File "D:\Projects\AI Projects\Heart Disease Prediction - GenAI\src\predict.py", line 37, in __init__
+    raise ModelLoadingError("Could not load ML model. Please check model path and format.") from e
+src.exception.ModelLoadingError: Could not load ML model. Please check model path and format.
+
+2024-11-17 02:49:06,281 - __main__ - ERROR - Error in prediction: Prediction function encountered an error. Check inputs and model paths.
+2024-11-17 02:50:51,199 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2024-11-17 02:50:52,156 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2024-11-17 02:51:09,969 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2024-11-17 02:51:11,471 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2024-11-17 02:51:14,353 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2024-11-17 02:51:22,102 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2024-11-17 02:51:27,602 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2024-11-17 02:51:32,376 - __main__ - INFO - Starting prediction process...
+2024-11-17 02:51:32,376 - src.predict - INFO - DataPreprocessor initialized with scaler.
+2024-11-17 02:51:35,798 - tensorflow - WARNING - Error in loading the saved optimizer state. As a result, your model is starting with a freshly initialized optimizer.
+2024-11-17 02:51:35,826 - src.predict - INFO - ML model loaded successfully.
+2024-11-17 02:51:35,834 - src.llm - INFO - LLM model initialized successfully.
+2024-11-17 02:51:35,861 - src.predict - INFO - Data preprocessing completed successfully.
+2024-11-17 02:51:37,005 - src.predict - INFO - ML model prediction completed successfully.
+2024-11-17 02:54:24,848 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2024-11-17 02:54:25,027 - httpx - INFO - HTTP Request: GET http://127.0.0.1:7860/gradio_api/startup-events "HTTP/1.1 200 OK"
+2024-11-17 02:54:25,103 - httpx - INFO - HTTP Request: HEAD http://127.0.0.1:7860/ "HTTP/1.1 200 OK"
+2024-11-17 02:54:25,465 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2024-11-17 02:54:26,638 - httpx - INFO - HTTP Request: GET https://api.gradio.app/v3/tunnel-request "HTTP/1.1 200 OK"
+2024-11-17 02:54:45,567 - __main__ - INFO - Starting prediction process...
+2024-11-17 02:54:47,057 - src.predict - INFO - DataPreprocessor initialized with scaler.
+2024-11-17 02:54:48,471 - tensorflow - WARNING - Error in loading the saved optimizer state. As a result, your model is starting with a freshly initialized optimizer.
+2024-11-17 02:54:48,479 - src.predict - INFO - ML model loaded successfully.
+2024-11-17 02:54:48,482 - src.llm - INFO - LLM model initialized successfully.
+2024-11-17 02:54:48,485 - src.predict - INFO - Data preprocessing completed successfully.
+2024-11-17 02:54:49,436 - src.predict - INFO - ML model prediction completed successfully.
+2024-11-17 02:55:06,423 - src.llm - INFO - LLM inference successful.
+2024-11-17 02:55:06,425 - src.predict - INFO - LLM report generated successfully.
+2024-11-17 02:55:06,427 - __main__ - INFO - Prediction completed successfully.
+2024-11-17 02:56:42,081 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2024-11-17 02:56:48,571 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2024-11-17 02:56:58,071 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2024-11-17 02:57:19,071 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2024-11-17 02:57:28,481 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2024-11-17 02:59:48,115 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2024-11-17 02:59:56,679 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2024-11-17 03:00:26,249 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2024-11-17 03:00:56,663 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2024-11-17 03:01:17,362 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2024-11-17 03:02:23,823 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2024-11-17 03:02:49,733 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2024-11-17 03:03:10,154 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2024-11-17 03:03:33,479 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2024-11-17 03:03:59,002 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2024-11-17 03:04:01,218 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2024-11-17 03:04:04,301 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2024-11-17 03:04:10,591 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2024-11-17 03:04:12,168 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2024-11-17 03:04:13,901 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2024-11-17 03:04:14,544 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2024-11-17 03:04:22,050 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2024-11-17 03:04:23,353 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2024-11-17 03:04:25,817 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2024-11-17 03:04:26,835 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2024-11-17 03:04:28,808 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2024-11-17 03:05:24,548 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2024-11-17 03:06:44,711 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2024-11-17 03:06:56,563 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2024-11-17 03:07:04,921 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2024-11-17 03:07:30,292 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2024-11-17 03:07:33,675 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2024-11-17 03:07:38,743 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2024-11-17 03:07:40,971 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2024-11-17 03:08:10,597 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2024-11-17 03:08:14,979 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2024-11-17 03:08:21,936 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2024-11-17 03:08:29,478 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2024-11-17 03:08:31,694 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2024-11-17 03:08:33,956 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2024-11-17 03:08:41,981 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2024-11-17 03:08:43,274 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2024-11-17 03:08:44,298 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2024-11-17 03:08:52,939 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2024-11-17 03:09:38,603 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2024-11-17 03:09:42,444 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2024-11-17 03:09:48,553 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2024-11-17 03:13:57,425 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2024-11-17 03:14:17,919 - __main__ - INFO - Starting prediction process...
+2024-11-17 03:14:17,930 - src.predict - INFO - DataPreprocessor initialized with scaler.
+2024-11-17 03:14:18,267 - tensorflow - WARNING - Error in loading the saved optimizer state. As a result, your model is starting with a freshly initialized optimizer.
+2024-11-17 03:14:18,274 - src.predict - INFO - ML model loaded successfully.
+2024-11-17 03:14:18,281 - src.llm - INFO - LLM model initialized successfully.
+2024-11-17 03:14:18,284 - src.predict - INFO - Data preprocessing completed successfully.
+2024-11-17 03:14:18,638 - src.predict - INFO - ML model prediction completed successfully.
+2024-11-17 03:14:41,938 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2024-11-17 03:14:50,783 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2024-11-17 03:14:53,284 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2024-11-17 03:15:11,072 - src.llm - INFO - LLM inference successful.
+2024-11-17 03:15:11,072 - src.predict - INFO - LLM report generated successfully.
+2024-11-17 03:15:11,085 - __main__ - INFO - Prediction completed successfully.
+2024-11-17 03:15:13,573 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2024-11-17 03:15:35,276 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2024-11-17 03:15:42,255 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2024-11-17 03:15:48,864 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2024-11-17 03:15:50,655 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2024-11-17 03:16:10,994 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2024-11-17 03:16:12,454 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2024-11-17 03:16:15,905 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2024-11-17 03:16:19,752 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2024-11-17 03:16:22,499 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2024-11-17 03:16:53,452 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2024-11-17 03:17:04,544 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2024-11-17 03:17:09,034 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2024-11-17 03:17:13,650 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2024-11-17 03:17:23,050 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2024-11-17 03:17:49,049 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2024-11-17 03:18:09,275 - __main__ - INFO - Starting prediction process...
+2024-11-17 03:18:09,286 - src.predict - INFO - DataPreprocessor initialized with scaler.
+2024-11-17 03:18:09,529 - tensorflow - WARNING - Error in loading the saved optimizer state. As a result, your model is starting with a freshly initialized optimizer.
+2024-11-17 03:18:09,537 - src.predict - INFO - ML model loaded successfully.
+2024-11-17 03:18:09,543 - src.llm - INFO - LLM model initialized successfully.
+2024-11-17 03:18:09,546 - src.predict - INFO - Data preprocessing completed successfully.
+2024-11-17 03:18:09,851 - src.predict - INFO - ML model prediction completed successfully.
+2024-11-17 03:19:00,550 - src.llm - INFO - LLM inference successful.
+2024-11-17 03:19:00,552 - src.predict - INFO - LLM report generated successfully.
+2024-11-17 03:19:00,553 - __main__ - INFO - Prediction completed successfully.
+2024-11-17 03:21:02,854 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2024-11-17 03:21:14,309 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2024-11-17 03:21:28,767 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2024-11-17 03:21:47,570 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2024-11-17 03:22:02,178 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2024-11-17 03:22:29,693 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2024-11-17 03:22:30,798 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2024-11-17 03:22:38,402 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2024-11-17 03:22:52,178 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2024-11-17 03:22:53,837 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2024-11-17 03:23:08,055 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2024-11-17 03:23:56,416 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2024-11-17 03:23:59,634 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2024-11-17 03:24:18,122 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2024-11-17 03:24:22,883 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2024-11-17 03:24:24,301 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2024-11-17 03:24:35,951 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2024-11-17 03:24:37,476 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2024-11-17 03:25:02,281 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2024-11-17 03:25:12,467 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2024-11-17 03:25:15,818 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2024-11-17 03:26:00,417 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2024-11-17 03:26:04,196 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2024-11-17 03:26:08,250 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2024-11-17 03:26:18,200 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2024-11-17 03:26:28,150 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2024-11-17 03:26:35,923 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2024-11-17 03:26:37,856 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2024-11-17 03:26:39,463 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2024-11-17 03:26:59,032 - __main__ - INFO - Starting prediction process...
+2024-11-17 03:26:59,040 - src.predict - INFO - DataPreprocessor initialized with scaler.
+2024-11-17 03:26:59,274 - tensorflow - WARNING - Error in loading the saved optimizer state. As a result, your model is starting with a freshly initialized optimizer.
+2024-11-17 03:26:59,274 - src.predict - INFO - ML model loaded successfully.
+2024-11-17 03:26:59,293 - src.llm - INFO - LLM model initialized successfully.
+2024-11-17 03:26:59,295 - src.predict - INFO - Data preprocessing completed successfully.
+2024-11-17 03:26:59,596 - src.predict - INFO - ML model prediction completed successfully.
+2024-11-17 03:28:39,879 - src.llm - INFO - LLM inference successful.
+2024-11-17 03:28:39,881 - src.predict - INFO - LLM report generated successfully.
+2024-11-17 03:28:39,882 - __main__ - INFO - Prediction completed successfully.
+2024-11-17 03:28:44,818 - __main__ - INFO - Starting prediction process...
+2024-11-17 03:28:44,830 - src.predict - INFO - DataPreprocessor initialized with scaler.
+2024-11-17 03:28:45,027 - tensorflow - WARNING - Error in loading the saved optimizer state. As a result, your model is starting with a freshly initialized optimizer.
+2024-11-17 03:28:45,031 - src.predict - INFO - ML model loaded successfully.
+2024-11-17 03:28:45,031 - src.llm - INFO - LLM model initialized successfully.
+2024-11-17 03:28:45,033 - src.predict - INFO - Data preprocessing completed successfully.
+2024-11-17 03:28:45,218 - tensorflow - WARNING - 5 out of the last 5 calls to <function Model.make_predict_function.<locals>.predict_function at 0x000001F66CFE6320> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+2024-11-17 03:28:45,243 - src.predict - INFO - ML model prediction completed successfully.
+2024-11-17 03:28:52,074 - src.llm - INFO - LLM inference successful.
+2024-11-17 03:28:52,076 - src.predict - INFO - LLM report generated successfully.
+2024-11-17 03:28:52,078 - __main__ - INFO - Prediction completed successfully.
+2024-11-17 03:30:18,208 - httpx - INFO - HTTP Request: GET http://127.0.0.1:7860/gradio_api/startup-events "HTTP/1.1 200 OK"
+2024-11-17 03:30:18,264 - httpx - INFO - HTTP Request: HEAD http://127.0.0.1:7860/ "HTTP/1.1 200 OK"
+2024-11-17 03:30:24,607 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2024-11-17 03:30:25,298 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2024-11-17 03:30:37,731 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2024-11-17 03:31:16,995 - httpx - INFO - HTTP Request: GET http://127.0.0.1:7860/gradio_api/startup-events "HTTP/1.1 200 OK"
+2024-11-17 03:31:17,034 - httpx - INFO - HTTP Request: HEAD http://127.0.0.1:7860/ "HTTP/1.1 200 OK"
+2024-11-17 03:31:23,062 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2024-11-17 03:31:23,719 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2024-11-17 03:31:44,273 - __main__ - INFO - Starting prediction process...
+2024-11-17 03:31:45,914 - src.predict - INFO - DataPreprocessor initialized with scaler.
+2024-11-17 03:31:48,030 - tensorflow - WARNING - Error in loading the saved optimizer state. As a result, your model is starting with a freshly initialized optimizer.
+2024-11-17 03:31:48,032 - src.predict - INFO - ML model loaded successfully.
+2024-11-17 03:31:48,033 - src.llm - INFO - LLM model initialized successfully.
+2024-11-17 03:31:48,034 - src.predict - INFO - Data preprocessing completed successfully.
+2024-11-17 03:31:48,852 - src.predict - INFO - ML model prediction completed successfully.
+2024-11-17 03:31:54,876 - src.llm - INFO - LLM inference successful.
+2024-11-17 03:31:54,880 - src.predict - INFO - LLM report generated successfully.
+2024-11-17 03:31:54,882 - __main__ - INFO - Prediction completed successfully.
+2024-11-17 03:32:01,262 - httpx - INFO - HTTP Request: GET https://api.gradio.app/v3/tunnel-request "HTTP/1.1 200 OK"
+2024-11-17 13:18:40,949 - httpx - INFO - HTTP Request: GET http://127.0.0.1:7860/gradio_api/startup-events "HTTP/1.1 200 OK"
+2024-11-17 13:18:41,002 - httpx - INFO - HTTP Request: HEAD http://127.0.0.1:7860/ "HTTP/1.1 200 OK"
+2024-11-17 13:18:47,515 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2024-11-17 13:18:47,792 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2024-11-17 13:19:24,499 - httpx - INFO - HTTP Request: GET https://api.gradio.app/v3/tunnel-request "HTTP/1.1 200 OK"
+2024-11-17 14:39:50,668 - __main__ - INFO - Starting prediction process...
+2024-11-17 14:39:51,946 - src.predict - INFO - DataPreprocessor initialized with scaler.
+2024-11-17 14:39:53,997 - tensorflow - WARNING - Error in loading the saved optimizer state. As a result, your model is starting with a freshly initialized optimizer.
+2024-11-17 14:39:53,999 - src.predict - INFO - ML model loaded successfully.
+2024-11-17 14:39:54,006 - src.llm - INFO - LLM model initialized successfully.
+2024-11-17 14:39:54,014 - src.predict - INFO - Data preprocessing completed successfully.
+2024-11-17 14:39:54,777 - src.predict - INFO - ML model prediction completed successfully.
+2024-11-17 14:40:00,708 - src.llm - INFO - LLM inference successful.
+2024-11-17 14:40:00,708 - src.predict - INFO - LLM report generated successfully.
+2024-11-17 14:40:00,708 - __main__ - INFO - Prediction completed successfully.
